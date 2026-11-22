@@ -1,0 +1,24 @@
+<section class="video">
+  <h2>Vídeo</h2>
+  <p>Vídeo de 12 segons sobre els tipus de Pokémon, amb subtítols en català.</p>
+
+  @if(carregat) {
+    <!-- controlspreload="none" perquè no es carregui el vídeo fins que l'usuari hi faci clic -->
+    <video controlspreload="none" poster="/imatges/portada-video.webp" width="640" height="360">
+
+      <!-- Dos formats per a la compatibilitat, el navegador tria el primer que pot reproduir -->
+      <source src="/video/tipus.webm" type="video/webm"/>
+      <source src="/video/tipus.mp4" type="video/mp4"/>
+
+      <!-- Subtítols en català en format WebVTT -->
+      <track kind="captions" src="/video/tipus-ca.vtt" srclang="ca" label="Català" default/>
+      <!-- Missatge alternatiu -->
+      <p>El teu navegador no admet el vídeo HTML5.</p>
+    </video>
+  } @else{
+    <!-- fins que el vídeo sigui carregat -->
+    <div #espai class="espai">
+      <img src="/imatges/portada-video.webp" width="640" height="360" alt="Portada del vídeo sobre els tipus de Pokémon"/>
+    </div>
+  }
+</section>
