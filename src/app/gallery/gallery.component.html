@@ -1,0 +1,36 @@
+<section class="galeria">
+  <h2>Galeria de tipus</h2>
+  <p>El navegador tria la imatge que li convé segons la pantalla.</p>
+
+  <!-- Imatge visible des del principi -->
+  <figure class="destacada">
+    <img
+      src="/imatges/{{destacada.nom}}-800.webp"
+      srcset="/imatges/{{destacada.nom}}-400.webp 400w, /imatges/{{destacada.nom}}-800.webp 800w, /imatges/{{destacada.nom}}-1200.webp 1200w"
+      sizes="(max-width: 1100px) 100vw, 1060px"
+      width="1200"
+      height="675"
+      alt="{{destacada.alt}}"
+      loading="eager"
+    />
+    <figcaption>{{destacada.titol}}</figcaption>
+  </figure>
+
+  <!-- Es carrega quan l'usuari s'hi acosta -->
+  <div class="quadricula">
+    @for(imatge of imatges; track imatge.nom) {
+      <figure>
+        <img
+          src="/imatges/{{imatge.nom}}-400.webp"
+          srcset="/imatges/{{imatge.nom}}-400.webp 400w, /imatges/{{imatge.nom}}-800.webp 800w, /imatges/{{imatge.nom}}-1200.webp 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 350px"
+          width="1200"
+          height="675"
+          alt="{{imatge.alt}}"
+          loading="lazy"
+        />
+        <figcaption>{{imatge.titol}}</figcaption>
+      </figure>
+    }
+  </div>
+</section>

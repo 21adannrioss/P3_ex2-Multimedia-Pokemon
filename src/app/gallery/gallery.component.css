@@ -1,0 +1,39 @@
+.galeria {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #cc0000;
+  border-bottom: 3px solid #ffde00;
+  padding-bottom: 5px;
+}
+
+figure {
+  margin: 0;
+  background-color: white;
+  border: 2px solid #cc0000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.destacada {
+  margin-bottom: 20px;
+}
+
+.quadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
