@@ -5,7 +5,7 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [GalleryComponent, AudioPlayerComponent, VideoPlayerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
