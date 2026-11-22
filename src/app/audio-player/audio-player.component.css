@@ -1,0 +1,14 @@
+.audio {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #cc0000;
+  border-bottom: 3px solid #ffde00;
+  padding-bottom: 5px;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+}

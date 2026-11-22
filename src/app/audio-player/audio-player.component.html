@@ -1,0 +1,14 @@
+<section class="audio">
+  <h2>Àudio</h2>
+  <p>{{titol}}. Reprodueix-la.</p>
+
+  <!-- mostra els botons de reproducció, volum i progrés -->
+  <audio controls preload="metadata">
+    <!-- Es provarà cada font fins que en trobi una que pugui reproduir -->
+    <source src="/audio/melodia.ogg" type="audio/ogg"/>
+    <source src="/audio/melodia.mp3" type="audio/mpeg"/>
+    <!-- Missatge alternatiu -->
+    <p>El teu navegador no admet l'àudio HTML5.</p>
+    <p><a href="/audio/melodia.mp3">Descarrega la melodia en MP3</a>.</p>
+  </audio>
+</section>
